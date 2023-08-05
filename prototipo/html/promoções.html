@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="imgage/x-icon" href="img/aviao.ico">
+  <title>Promoções</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<style>
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+.container {
+  flex-basis: auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+}
+
+.card {
+  width: 100%;
+  margin-top: 0px;
+  max-width: 100%; /* Define o tamanho máximo do card */
+  background-color: white;
+  box-shadow: 0 px 4px 0 rgba(0, 0, 0,.2);
+  border-radius: px;
+  position: relative;
+  justify-content: space-evenly;
+  /*margin: 15px auto ; /* Centraliza os cards horizontalmente */
+}
+/* Fazendo o recorte da abinha de promoções*/
+.card span {
+  width: 200px;
+  height: 200px;
+  /*background-color: red;*/
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card span::before {
+  content: 'PROMOÇÃO';
+  position: absolute;
+  width: 500px;
+  height: 40px;
+  background-color: red;
+  transform: rotate(-45deg) translateY(-20px);
+  box-shadow: 0 13px 20px rgba(0, 0, 0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card span::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  /* o zero sera o canto do quadrado no incio da tag card span (esta comentado) essa parte é a sombra da tag promocoes-baixo*/
+  left: 0;
+  background-color: rgb(128, 7, 7);
+  z-index: -2;
+}
+
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px ;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #bc1111;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-button {
+  width: 100%;
+  padding: 8px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+
+    
+    <!--INICIO CARD1-->
+      <div class="card">
+        <div class="card" style="">
+          <img src="img/natal.jpg" alt="Natal-RN">
+          <div class="card-body">
+            <h4 class="card-title">Passagem de São Paulo à Natal:</h4>
+            <p class="card-text">Saindo do Aeroporto Internacional de Guarulhos(GUA) para Aeroporto Internacional de Natal (NAT)</p>
+            <h3><s>R$ 2.800,00</s></h3>
+            <h2>R$ 2.500,00</h2>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" type="button">COMPRAR</button>
+            </div>
+          </div>
+        </div>
+        <span></span>
+      </div>
+      <!--FIM CARD1-->
+
+      <!-- INICIO CARD 2-->
+      <div class="card">
+        <div class="card" style="">
+          <img src="img/recifepe.jpg" class="card-img-top" alt="Recife-PE">
+          <div class="card-body">
+            <h4 class="card-title">Passagem de São Paulo à Recife:</h4>
+            <p class="card-text">Saindo do Aeroporto Internacional de Guarulhos(GUA) para Aeroporto Internacional de Fortaleza (FOR)</p>
+            <h3><s>R$ 1.800,00</s></h3>
+            <h2>R$ 1.500,00</h2>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" type="button">COMPRAR</button>
+            </div>
+          </div>
+        </div>
+        <span></span>
+    </div>
+    <!--FIM CARD 2-->
+
+    <!--INICIO CARD 3-->
+    <div class="card">
+      <div class="card" style="">
+        <img src="img/fortal.jpg" class="card-img-top" alt="Recife-PE">
+        <div class="card-body">
+          <h4 class="card-title">Passagem de São Paulo à Fortaleza:</h4>
+          <p class="card-text">Saindo do Aeroporto Internacional de Guarulhos(GUA) para Aeroporto Internacional do Recife (REC)</p>
+          <h3><s>R$ 3.800,00</s></h3>
+          <h2>R$ 3.500,00</h2>
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="button">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+      <span></span>
+    </div>
+    <!--FIM CARD 3-->
+  </div>
+</div>   
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
